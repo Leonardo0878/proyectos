@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panel de Administración de Alumnos</title>
+    <link rel="shortcut icon" href="admin.jpg" type="image/x-icon" />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Segoe UI", sans-serif;
+        display: flex;
+        height: 100vh;
+        background-color: #60e9c7;
+        color: #e0f7ff;
+      }
+
+      /* Menú lateral */
+      .sidebar {
+        width: 220px;
+        background-color: #8714aa6b;
+        color: white;
+        padding-top: 30px;
+        position: fixed;
+        height: 100%;
+        box-shadow: 2px 0 10px rgba(0, 188, 212, 0.2);
+      }
+
+      .sidebar h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 22px;
+        color: #00bcd4;
+      }
+
+      .sidebar a {
+        display: block;
+        padding: 15px 25px;
+        text-decoration: none;
+        color: #6f1ca7;
+        font-weight: bold;
+        transition: background 0.3s;
+        border-radius: 20px;
+      
+        background-color: rgb(52, 109, 52);
+      }
+
+      .sidebar a:hover {
+        background-color: #0097a7;
+      }
+
+      /* Contenido principal */
+      .content {
+        margin-left: 220px;
+        padding: 40px;
+        width: calc(100% - 220px);
+        overflow-y: auto;
+      }
+
+      header {
+        margin-bottom: 30px;
+      }
+
+      header h1 {
+        font-size: 28px;
+        color: #00bcd4;
+      }
+
+      iframe {
+        width: 100%;
+        height: 80vh;
+        border: none;
+        background-color: #c70404;
+        border-radius: 8px;
+        box-shadow: 0 0 20px rgba(0, 188, 212, 0.2);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Menú lateral -->
+    <div class="sidebar">
+      <h2>Administrador</h2>
+      <a href="consulta.php" target="contenido">Consultar</a>
+      <a href="inserta_datos.php" target="contenido">Agregar</a>
+      <a href="actualizar_datos.php" target="contenido">Actualizar</a>
+      <a href="borrar_datos.php" target="contenido">Eliminar </a>
+    </div>
+
+    <!-- Contenido dinámico -->
+    <div class="content">
+      <header>
+        <h1>Panel de Administracion de alumnos</h1>
+      </header>
+    </div>
+  </body>
+</html>
